@@ -1,15 +1,22 @@
 package CS2020.assignment2;
-import javax.swing.*;
+import java.awt.EventQueue;
 
-public class App{
-    public static void main(String[] args){
-        
-        ProductListGUI createGUI = new ProductListGUI();
+public class App {
 
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createGUI.createAndShowGUI();
-            }
-        });
-    }
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ProductListGUI frame = new ProductListGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
 }
